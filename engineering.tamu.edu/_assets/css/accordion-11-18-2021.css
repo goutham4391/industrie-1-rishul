@@ -1,0 +1,223 @@
+.Accordion {
+  margin: 0;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  /*width: 20em;*/
+}
+
+.Accordion h3 {
+  margin: 0;
+  padding: 0;
+}
+/*blue border*/
+/*.Accordion.focus {
+  border-color: hsl(216, 94%, 84%);
+}*/
+
+.Accordion.focus h3 {
+  background-color: hsl(0, 0%, 97%);
+}
+
+.Accordion > * + * {
+  border-top: 3px solid #6A2626;
+}
+
+.Accordion-trigger {
+  background: #500;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: .5em 1.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.Accordion-trigger:focus,
+.Accordion-trigger:hover {
+  background: #6A2626;
+  color: #fec300;
+}
+
+.Accordion-trigger-start:focus,
+.Accordion-trigger-start:hover {
+  background: #eeeeee;
+  color: #fec300;
+}
+
+.Accordion *:first-child .Accordion-trigger {
+  border-radius: 5px 5px 0 0;
+}
+
+.Accordion *:first-child .Accordion-trigger-start {
+  border-radius: 5px 5px 0 0;
+}
+
+button {
+  border-style: none;
+}
+
+.Accordion button::-moz-focus-inner {
+  border: 0;
+}
+
+.Accordion-title {
+  word-wrap: break-word;
+  display: block;
+  pointer-events: none;
+  border: transparent 2px solid;
+  border-radius: 5px;
+  /*padding-top:0.1em;*/
+  padding-left: 0.25em;
+  /*padding-bottom: 0.1em;*/
+  padding-right: 0.35em;
+  line-height: 1.6;
+  outline: none;
+}
+/*might want to delete this, its the title border */
+/*.Accordion-trigger:focus .Accordion-title {
+  border-color: hsl(216, 94%, 84%);
+}*/
+
+.Accordion-icon {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  height: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-50%) rotate(-135deg);
+  width: 0.5rem;
+}
+
+.Accordion-trigger:focus .Accordion-icon,
+.Accordion-trigger:hover .Accordion-icon {
+  border-color: #fce300;
+}
+
+.Accordion-trigger[aria-expanded="true"] .Accordion-icon {
+  transform: translateY(-60%) rotate(45deg);
+}
+
+.Accordion-panel {
+  margin: 0;
+  padding: 0;
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.Accordion-panel[hidden] {
+  display: none;
+}
+
+
+.Accordion-Start *:first-child .Accordion-trigger-start-start {
+    border-radius: 0px 0px 0 0;
+}
+
+.body-accordion {
+    background-color: white !important;
+}
+
+.body-accordion-list {
+    list-style-type:none; 
+    margin-left:0;
+}
+
+.Accordion-trigger-start {
+    background: #c4c4c4;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    outline: none;
+}
+
+ button.Accordion-trigger-start:hover, button.Accordion-trigger-start:active, button.Accordion-trigger-start:focus {
+    background-color: #eeeeee;
+}
+
+.Accordion-panel-start[hidden] {
+    display: none;
+}
+
+.Accordion-panel-start {
+    margin: 0;
+    padding: 0;
+}
+
+.Accordion-Start > * + * {
+    border-top: 3px solid #fff;
+}
+.a-title {
+    color: #000;
+}
+/*class="Accordion-icon"*/
+button span.new-icon, button span.new-icon-side {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    border: 0;
+    font-size: 1.5em;
+    position: absolute;
+    float: left;
+    right: 24px;
+    top: 24%;
+    pointer-events: none;
+}
+
+button.new-icon span.test, button.new-icon-side span.test {
+  position: absolute;
+  transition: 300ms;
+  border-radius: 2px;
+}
+
+button.new-icon-side span.test {
+  background: #fff;
+  color: #fff;
+}
+
+button.new-icon span.test {
+  background: #000;
+    color: #000;
+}
+
+/* Create the "+" shape by positioning the spans absolutely */
+button.new-icon span.test:first-child, button.new-icon-side span.test:first-child {
+  top: 25%;
+  bottom: 25%;
+  width: 10%;
+  left: 45%;
+}
+
+button.new-icon span.test:first-child, button.new-icon-side span.test:first-child  {
+  top: 25%;
+  bottom: 25%;
+  width: 10%;
+  left: 45%;
+}
+
+button.new-icon span.test:last-child, button.new-icon-side span.test:last-child {
+  left: 25%;
+  right: 25%;
+  height: 10%;
+  top: 45%;
+}
+
+/* Morph the shape when the button is active over */
+button.new-icon[aria-expanded="true"] span.test, button.new-icon-side[aria-expanded="true"] span.test {
+  transform: rotate(90deg);
+}
+
+button.new-icon[aria-expanded="true"] span.test:last-child, button.new-icon-side[aria-expanded="true"] span.test:last-child {
+  left: 50%;
+  right: 50%;
+}
